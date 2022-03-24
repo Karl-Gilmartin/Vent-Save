@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" type="image/png" href="./Resources/logo3.png" />
+  <title>Client Login</title>
+  <!-- <script src="./script3.js"></script> -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="shortcut icon" type="image" href="./Resources/logo_black.png"/>
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<link rel="stylesheet" href="./login.css">
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-auth.js"></script>
+<script src="login.js"></script>
+</head>
+<body>
+  <div class="sidebar">
+    <div id="logo">
+        <img alt="Logo" class="logo" src="./Resources/logo2.png">
+    </div>
+    <i class='bx bx-menu' id="menu_btn" undefined ></i>
+<!-- </div> -->
+<ul class="nav_list">
+    
+    <li>
+        
+        <a href ="index.html">
+            <i class='bx bx-home-alt'></i>
+            <span class="links_name">Home</span>
+        </a>
+
+    </li>
+    <li>
+        <a href ="our_products.html">
+            <i class='bx bx-speaker bx-rotate-270' ></i>
+            <span class="links_name">Our Products</span>
+        </a>
+
+    </li>
+    <li>
+        <a href ="about_us.html">
+            <i class='bx bx-info-circle' ></i>
+            <span class="links_name">About Us</span>
+        </a>
+ 
+    </li>
+    <li>
+        <a href ="contact_us.html">
+            <i class='bx bx-envelope' ></i>
+            <span class="links_name">Contact Us</span>
+        </a>
+
+    </li>
+    <li>
+        <a href ="login.html">
+            <i class='bx bx-log-in' ></i>
+            <span class="links_name">Client Login</span>
+        </a>
+
+    </li>
+
+
+</ul>
+</div>
+
+<div class="box-form">
+	<div class="left">
+		<div class="overlay">
+		<h1>Vent & Save  </h1>
+		<h3>Welcome to Vent & Save - Client Login Page. <br>To get started, enter your login details issued to you by Vent & Save. If you have any problems click <a href="/contact_us.html">Here</a></h3>
+        <img alt="Logo" id="logo" src="./Resources/logo2.png" >
+		</div>
+	</div>
+	
+	
+		<div class="right">
+		<h5>Login</h5>
+        <em>Examiner:<br> Email: admin@ventandsave.ie <br> Password: Pass1234 </em>
+		<div class="inputs">
+			<input type="text" placeholder="Username"  id="username_field">
+			<br>
+			<input type="password" placeholder="Password" id="password_field">
+		</div>
+			
+			<br><br>
+	
+			
+			<br>
+			<button type="login" id="log_in" onclick="signIn()">Login Here</button>
+	</div>
+	
+</div>
+
+
+
+
+<!-- partial -->
+  
+</body>
+</html>

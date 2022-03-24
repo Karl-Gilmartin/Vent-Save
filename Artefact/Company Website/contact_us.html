@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/png" href="./Resources/logo3.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-auth.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="contact.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    
+    <style>
+body {background: rgb(9,0,98);
+background: linear-gradient(22deg, rgba(9,0,98,1) 18%, rgba(161,217,223,1) 100%);
+	height: 100vh;
+}
+
+
+
+    </style>
+</head>
+<body>
+  <div class="sidebar">
+    <div id="logo">
+        <img alt="Logo" class="logo" src="./Resources/logo2.png">
+    </div>
+    <i class='bx bx-menu' id="menu_btn" undefined ></i>
+<ul class="nav_list">
+    
+    <li>
+        
+        <a href ="index.html">
+            <i class='bx bx-home-alt'></i>
+            <span class="links_name">Home</span>
+        </a>
+    </li>
+    <li>
+        <a href ="our_products.html">
+            <i class='bx bx-speaker bx-rotate-270' ></i>
+            <span class="links_name">Our Products</span>
+        </a>
+    </li>
+    <li>
+        <a href ="about_us.html">
+            <i class='bx bx-info-circle' ></i>
+            <span class="links_name">About Us</span>
+        </a>
+    </li>
+    <li>
+        <a href ="contact_us.html">
+            <i class='bx bx-envelope' ></i>
+            <span class="links_name">Contact Us</span>
+        </a>
+    </li>
+    <li>
+        <a href ="login.html">
+            <i class='bx bx-log-in' ></i>
+            <span class="links_name">Client Login</span>
+        </a>
+    </li>
+
+</ul>
+</div>
+    <div id="contact_page">
+      <div id="initial_text">
+      <p>If you run into any problems with our serveice/ products or would like to find more information about Vent& Save, please get in touch, to get in touch with our excellent team, please enter you details below and we will return to you shortly. </p>
+      
+    <div class="container">
+        <h3 class="back_light"><span>Contact Us</span></h2>
+          <label >Name</label>
+          <input type="text" id="nameInput" name="firstname" placeholder="Your Name">
+      
+          <label >Email</label>
+          <input type="email" id="emailInput" name="lastname" placeholder="Your Email Address">
+          <div id="msg">
+          <label>Message</label>
+          <input type="text" id="messageInput"  placeholder="Your Message">
+        </div>
+        <div id="submit">
+          <button id="submit_btn" onclick="saveData()">Submit</button>
+        </div>
+      </div>
+    </div>
+    </div>
+    <footer>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18640.09219014422!2d-8.49828251330395!3d54.26837367545019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x485ee9b5677caee9%3A0xa00c7a997317380!2sSligo!5e0!3m2!1sen!2sie!4v1647525258445!5m2!1sen!2sie" width="450" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <br>
+            <h3>Vent & Save</h3>
+            <p>Vent & Save has been created as part of a submission for LC Computer Science Course Work Project 2022. Vent & Save is a fictional company and is not in operation.</p>
+            
+        <a href="/contact_us.html">
+            <button id ="contact_here"> Click here to get in touch with us</button>
+            </a>
+        <p id="footer_overlay">Copyright &copy;2022 <a href="index.html">Vent & Save Ltd.</a>  </p> 
+    
+    </footer>
+
+<script>let btn = document.querySelector("#menu_btn");
+    let sidebar = document.querySelector(".sidebar");
+    // alert("JavaScript is working")
+    
+    btn.onclick = function(){
+        sidebar.classList.toggle("active")
+        sidebar.reset()
+        // setTimeout(hideElement,2000)
+    };</script>
+</body>
+</html>

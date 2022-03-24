@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./login.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="shortcut icon" type="image" href="/Resources/logo_black.png"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-auth.js"></script>
+  
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="script4.js"></script>
+  
+</head>
+<body>
+  <div class="box-form">
+    <div class="txt_view">
+    <h2 id="enter">Hi, welcome to St. Lukes Community College classroom dashboard. You are currently viewing classroom: <em>16</em></h2>
+    <div class="graphs">
+      <iframe  id="graph_temp"width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1667340/charts/1?bgcolor=%23ade8f4&color=%23d62020&dynamic=true&results=60&title=Tempreature&type=line"></iframe>
+      <iframe id="graph_humid" width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1667340/charts/2?bgcolor=%2348cae4&color=%23d62020&dynamic=true&results=60&title=Humidity&type=line"></iframe>
+      <iframe id="graph_smoke" width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1667340/charts/3?bgcolor=%230096c7&color=%23d62020&dynamic=true&results=60&title=Smoke&type=line"></iframe>
+      <iframe id="graph_carbon" width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1667340/charts/4?bgcolor=%2372A0C1&color=%23d62020&dynamic=true&results=60&title=Carbon&type=line"></iframe>
+      <iframe  id ="graph_co2" width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1667340/charts/6?bgcolor=%23F0F8FF&color=%23d62020&dynamic=true&results=60&title=Carbon+dioxide&type=line&yaxismin=0"></iframe>
+</div>
+</div>
+<div class="buttons">
+<button id="btn_on" onclick="fanOn()">Turn on Fan</button>
+<button id="btn_override" onclick="fanOverride()">Shut System Down<i> (Holiday Mode)</i></button>
+<button id="btn_off" onclick="fanOff()">Turn off Fan</button>
+</div>
+<p id="powered">Powered by:  <a href="index.html"><img src="/Resources/logo_black.png"></a></p>
+<h6>(Click on logo to visit Vent & Save)</h6>
+<button id="log_out" onclick="logOut()">Log Out</button>
+</div>
+</body>
+</html>
